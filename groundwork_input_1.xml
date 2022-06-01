@@ -1,0 +1,301 @@
+<Projects>
+    <Project>
+        <Name>Space Probe Construction</Name>
+        <Tasks>
+            <Task>
+                <TaskID>0</TaskID>
+                <Description>Space Probe Hull Construction</Description>
+                <Duration>5</Duration>
+                <Dependencies></Dependencies>
+            </Task>
+            <Task>
+                <TaskID>1</TaskID>
+                <Description>Hardware and Operating System Installation</Description>
+                <Duration>4</Duration>
+                <Dependencies>
+                    <DependsOnTaskID>0</DependsOnTaskID>
+                </Dependencies>
+            </Task>
+            <Task>
+                <TaskID>2</TaskID>
+                <Description>Radar Installation</Description>
+                <Duration>2</Duration>
+                <Dependencies>
+                    <DependsOnTaskID>1</DependsOnTaskID>
+                </Dependencies>
+            </Task>
+            <Task>
+                <TaskID>3</TaskID>
+                <Description>Navigation Module Installation</Description>
+                <Duration>1</Duration>
+                <Dependencies>
+                    <DependsOnTaskID>2</DependsOnTaskID>
+                    <DependsOnTaskID>4</DependsOnTaskID>
+                </Dependencies>
+            </Task>
+            <Task>
+                <TaskID>4</TaskID>
+                <Description>Antenna and Communication HW/SW Installation</Description>
+                <Duration>4</Duration>
+                <Dependencies>
+                    <DependsOnTaskID>0</DependsOnTaskID>
+                    <DependsOnTaskID>1</DependsOnTaskID>
+                </Dependencies>
+            </Task>
+            <Task>
+                <TaskID>5</TaskID>
+                <Description>Testing and Finalizing Project</Description>
+                <Duration>3</Duration>
+                <Dependencies>
+                    <DependsOnTaskID>3</DependsOnTaskID>
+                    <DependsOnTaskID>4</DependsOnTaskID>
+                </Dependencies>
+            </Task>
+        </Tasks>
+    </Project>
+    <Project>
+        <Name>Space Shuttle Construction</Name>
+        <Tasks>
+            <Task>
+                <TaskID>0</TaskID>
+                <Description>Space Shuttle Hull Construction</Description>
+                <Duration>17</Duration>
+                <Dependencies></Dependencies>
+            </Task>
+            <Task>
+                <TaskID>1</TaskID>
+                <Description>Space Shuttle Operating System</Description>
+                <Duration>5</Duration>
+                <Dependencies>
+                    <DependsOnTaskID>0</DependsOnTaskID>
+                    <DependsOnTaskID>2</DependsOnTaskID>
+                </Dependencies>
+            </Task>
+            <Task>
+                <TaskID>2</TaskID>
+                <Description>Space Shuttle Computational Hardware</Description>
+                <Duration>6</Duration>
+                <Dependencies>
+                    <DependsOnTaskID>0</DependsOnTaskID>
+                </Dependencies>
+            </Task>
+            <Task>
+                <TaskID>3</TaskID>
+                <Description>Communication Hardware</Description>
+                <Duration>9</Duration>
+                <Dependencies>
+                    <DependsOnTaskID>1</DependsOnTaskID>
+                    <DependsOnTaskID>5</DependsOnTaskID>
+                </Dependencies>
+            </Task>
+            <Task>
+                <TaskID>4</TaskID>
+                <Description>Communication Software</Description>
+                <Duration>7</Duration>
+                <Dependencies>
+                    <DependsOnTaskID>3</DependsOnTaskID>
+                    <DependsOnTaskID>5</DependsOnTaskID>
+                </Dependencies>
+            </Task>
+            <Task>
+                <TaskID>5</TaskID>
+                <Description>Antenna Module Installation</Description>
+                <Duration>2</Duration>
+                <Dependencies>
+                    <DependsOnTaskID>0</DependsOnTaskID>
+                </Dependencies>
+            </Task>
+            <Task>
+                <TaskID>6</TaskID>
+                <Description>Encryption Software</Description>
+                <Duration>9</Duration>
+                <Dependencies>
+                    <DependsOnTaskID>2</DependsOnTaskID>
+                    <DependsOnTaskID>4</DependsOnTaskID>
+                </Dependencies>
+            </Task>
+            <Task>
+                <TaskID>7</TaskID>
+                <Description>Radar Hardware</Description>
+                <Duration>10</Duration>
+                <Dependencies>
+                    <DependsOnTaskID>10</DependsOnTaskID>
+                </Dependencies>
+            </Task>
+            <Task>
+                <TaskID>8</TaskID>
+                <Description>Radar Software</Description>
+                <Duration>5</Duration>
+                <Dependencies>
+                    <DependsOnTaskID>6</DependsOnTaskID>
+                    <DependsOnTaskID>7</DependsOnTaskID>
+                </Dependencies>
+            </Task>
+            <Task>
+                <TaskID>9</TaskID>
+                <Description>Navigator Module</Description>
+                <Duration>4</Duration>
+                <Dependencies>
+                    <DependsOnTaskID>0</DependsOnTaskID>
+                    <DependsOnTaskID>8</DependsOnTaskID>
+                    <DependsOnTaskID>10</DependsOnTaskID>
+                </Dependencies>
+            </Task>
+            <Task>
+                <TaskID>10</TaskID>
+                <Description>Radar Construction</Description>
+                <Duration>11</Duration>
+                <Dependencies>
+                    <DependsOnTaskID>0</DependsOnTaskID>
+                </Dependencies>
+            </Task>
+            <Task>
+                <TaskID>11</TaskID>
+                <Description>Navigation Software</Description>
+                <Duration>6</Duration>
+                <Dependencies>
+                    <DependsOnTaskID>9</DependsOnTaskID>
+                </Dependencies>
+            </Task>
+            <Task>
+                <TaskID>12</TaskID>
+                <Description>Testing and Project Finalizing</Description>
+                <Duration>10</Duration>
+                <Dependencies>
+                    <DependsOnTaskID>6</DependsOnTaskID>
+                    <DependsOnTaskID>11</DependsOnTaskID>
+                </Dependencies>
+            </Task>
+        </Tasks>
+    </Project>
+    <Project>
+        <Name>Space Suit Development</Name>
+        <Tasks>
+            <Task>
+                <TaskID>0</TaskID>
+                <Description>Research Facility</Description>
+                <Duration>10</Duration>
+                <Dependencies></Dependencies>
+            </Task>
+            <Task>
+                <TaskID>1</TaskID>
+                <Description>Testing Facility</Description>
+                <Duration>10</Duration>
+                <Dependencies>
+                    <DependsOnTaskID>0</DependsOnTaskID>
+                    <DependsOnTaskID>2</DependsOnTaskID>
+                </Dependencies>
+            </Task>
+            <Task>
+                <TaskID>2</TaskID>
+                <Description>Production Facility</Description>
+                <Duration>10</Duration>
+                <Dependencies>
+                    <DependsOnTaskID>0</DependsOnTaskID>
+                </Dependencies>
+            </Task>
+            <Task>
+                <TaskID>3</TaskID>
+                <Description>Fabric Production</Description>
+                <Duration>5</Duration>
+                <Dependencies>
+                    <DependsOnTaskID>2</DependsOnTaskID>
+                    <DependsOnTaskID>4</DependsOnTaskID>
+                </Dependencies>
+            </Task>
+            <Task>
+                <TaskID>4</TaskID>
+                <Description>Fabric Research</Description>
+                <Duration>4</Duration>
+                <Dependencies>
+                    <DependsOnTaskID>0</DependsOnTaskID>
+                </Dependencies>
+            </Task>
+            <Task>
+                <TaskID>5</TaskID>
+                <Description>Fabric Testing</Description>
+                <Duration>1</Duration>
+                <Dependencies>
+                    <DependsOnTaskID>1</DependsOnTaskID>
+                    <DependsOnTaskID>3</DependsOnTaskID>
+                </Dependencies>
+            </Task>
+            <Task>
+                <TaskID>6</TaskID>
+                <Description>Glass Testing</Description>
+                <Duration>1</Duration>
+                <Dependencies>
+                    <DependsOnTaskID>1</DependsOnTaskID>
+                    <DependsOnTaskID>8</DependsOnTaskID>
+                </Dependencies>
+            </Task>
+            <Task>
+                <TaskID>7</TaskID>
+                <Description>Glass Research</Description>
+                <Duration>3</Duration>
+                <Dependencies>
+                    <DependsOnTaskID>0</DependsOnTaskID>
+                </Dependencies>
+            </Task>
+            <Task>
+                <TaskID>8</TaskID>
+                <Description>Glass Production</Description>
+                <Duration>6</Duration>
+                <Dependencies>
+                    <DependsOnTaskID>2</DependsOnTaskID>
+                    <DependsOnTaskID>7</DependsOnTaskID>
+                </Dependencies>
+            </Task>
+            <Task>
+                <TaskID>9</TaskID>
+                <Description>Radio Production</Description>
+                <Duration>4</Duration>
+                <Dependencies>
+                    <DependsOnTaskID>2</DependsOnTaskID>
+                    <DependsOnTaskID>5</DependsOnTaskID>
+                    <DependsOnTaskID>6</DependsOnTaskID>
+                    <DependsOnTaskID>11</DependsOnTaskID>
+                </Dependencies>
+            </Task>
+            <Task>
+                <TaskID>10</TaskID>
+                <Description>Radio Testing</Description>
+                <Duration>1</Duration>
+                <Dependencies>
+                    <DependsOnTaskID>9</DependsOnTaskID>
+                </Dependencies>
+            </Task>
+            <Task>
+                <TaskID>11</TaskID>
+                <Description>Radio Hardware Development</Description>
+                <Duration>7</Duration>
+                <Dependencies>
+                    <DependsOnTaskID>0</DependsOnTaskID>
+                </Dependencies>
+            </Task>
+            <Task>
+                <TaskID>12</TaskID>
+                <Description>Space Suit Production</Description>
+                <Duration>10</Duration>
+                <Dependencies>
+                    <DependsOnTaskID>1</DependsOnTaskID>
+                    <DependsOnTaskID>5</DependsOnTaskID>
+                    <DependsOnTaskID>6</DependsOnTaskID>
+                    <DependsOnTaskID>10</DependsOnTaskID>
+                </Dependencies>
+            </Task>
+            <Task>
+                <TaskID>13</TaskID>
+                <Description>Space Suit Testing</Description>
+                <Duration>3</Duration>
+                <Dependencies>
+                    <DependsOnTaskID>12</DependsOnTaskID>
+                </Dependencies>
+            </Task>
+        </Tasks>
+    </Project>
+</Projects>
+
+
+
+

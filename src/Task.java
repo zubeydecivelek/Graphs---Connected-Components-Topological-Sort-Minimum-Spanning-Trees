@@ -1,0 +1,50 @@
+import java.util.List;
+import java.util.Objects;
+
+public class Task {
+    private final int taskID;
+    private final String description;
+    private final int duration;
+    private final List<Integer> dependencies;
+
+    public Task(int taskID, String description, int duration, List<Integer> dependencies) {
+        this.taskID = taskID;
+        this.description = description;
+        this.duration = duration;
+        this.dependencies = dependencies;
+    }
+
+    @Override
+    public String toString() {
+        String ret = "TaskID : " + taskID + " description: " + description + " duration: " + duration + " dependencies: ";
+        for (int i=0;i<dependencies.size();i++){
+            ret += dependencies.get(i);
+            ret += " ";
+        }
+        return ret;
+    }
+
+    public int getTaskID() {
+        return taskID;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public int getDuration() {
+        return duration;
+    }
+
+    public List<Integer> getDependencies() {
+        return dependencies;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Task task = (Task) o;
+        return taskID == task.taskID && duration == task.duration && description.equals(task.description) && dependencies.equals(task.dependencies);
+    }
+}
